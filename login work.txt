@@ -1,0 +1,57 @@
+<div class="card-body">
+
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'librousbook1');
+$register= "SELECT * FROM admin_table";
+$register_run = mysqli_query($conn, $register);
+
+if(mysqli_num_rows($register_run)>0)
+{
+
+?>
+
+</div>
+<table class="table" id="admin_table" >
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Image</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody>
+
+
+<?php
+while($reg_row = mysqli_fetch_array($register_run))
+  {
+
+?>
+<tr>
+<th scope="row"><?php echo $reg_row['Id'];?></th>
+<td><?php echo $reg_row['Name'];?></td>
+<td><?php echo $reg_row['Email'];?></td>
+<td id="admin_image"><img src="<?php echo"upload/" .$reg_row['Image'];?> " alt="image" ></td>
+
+
+<td><a href="register.php" class="btn btn-info">Edit</a></td>
+<td><a href="register.php" class="btn btn-danger">Delete</a></td>
+</tr>
+<?php }
+?>
+</tbody>
+</table>
+<?php
+}
+else{
+echo"No record found";
+}
+?>
+</div>
+
+
+</div>
+

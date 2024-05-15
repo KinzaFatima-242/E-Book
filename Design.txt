@@ -1,0 +1,25 @@
+Color Theme:
+
+Blue:#090232;
+Pale Pink:#F5EEE5;
+
+
+,'$phone','$address','$birthdate','$concern',$city,'$province','$country','$zip','$description'
+
+
+
+
+
+,phone,address,birthdate,concern,city,province,country,zip,description
+
+
+
+   $phone=$_POST['phone'];
+    $address=$_POST['address'];
+    $birthdate=$_POST['birthdate'];
+    $concern=$_POST['concern'];    
+    $city=$_POST['city'];
+    $zip=$_POST['zip'];
+    $province=$_POST['province'];
+    $country=$_POST['country'];
+    $description=$_POST['description'];
